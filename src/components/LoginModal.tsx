@@ -4,7 +4,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } f
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { User } from "lucide-react";
+import { Lock } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 
 interface LoginModalProps {
@@ -36,31 +36,36 @@ const LoginModal = ({ open, onOpenChange }: LoginModalProps) => {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-md">
+      <DialogContent className="sm:max-w-md bg-gradient-glass backdrop-blur-glass border-border/50">
         <DialogHeader>
-          <DialogTitle className="flex items-center gap-2 text-2xl">
-            <User className="w-6 h-6 text-primary" />
-            Login to Your Account
+          <DialogTitle className="flex items-center gap-3 text-3xl font-serif">
+            <div className="p-2 bg-gradient-luxury rounded-lg shadow-soft">
+              <Lock className="w-6 h-6 text-white" />
+            </div>
+            Client Portal Access
           </DialogTitle>
-          <DialogDescription>
-            Enter your name to access your insurance dashboard. This is a demo environment.
+          <DialogDescription className="text-muted-foreground font-light">
+            Enter your name to access your premium insurance dashboard.
           </DialogDescription>
         </DialogHeader>
-        <div className="space-y-4 py-4">
-          <div className="space-y-2">
-            <Label htmlFor="name">Your Name</Label>
+        <div className="space-y-6 py-6">
+          <div className="space-y-3">
+            <Label htmlFor="name" className="text-foreground font-medium">Your Name</Label>
             <Input
               id="name"
-              placeholder="Enter your name"
+              placeholder="Enter your full name"
               value={name}
               onChange={(e) => setName(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && handleLogin()}
-              className="w-full"
+              className="h-12 bg-white/50 border-border/50 focus:border-primary/50"
             />
           </div>
-          <Button variant="hero" className="w-full" onClick={handleLogin}>
-            Continue to Dashboard
+          <Button variant="luxury" size="lg" className="w-full shadow-luxury" onClick={handleLogin}>
+            Access Dashboard
           </Button>
+          <p className="text-xs text-center text-muted-foreground font-light">
+            Demonstration environment — No password required
+          </p>
         </div>
       </DialogContent>
     </Dialog>

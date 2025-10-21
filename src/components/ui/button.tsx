@@ -9,14 +9,15 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-soft transition-all hover:shadow-lg hover:scale-105",
-        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-gradient-hero text-primary-foreground hover:opacity-90 shadow-soft transition-all hover:shadow-lg hover:scale-105",
-        success: "bg-accent text-accent-foreground hover:bg-accent/90 shadow-soft transition-all hover:shadow-lg",
+        default: "bg-primary text-primary-foreground hover:bg-primary-variant shadow-luxury transition-all duration-500 hover:shadow-soft hover:scale-[1.02]",
+        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-soft transition-all duration-500",
+        outline: "border-2 border-primary/20 bg-background hover:bg-primary/5 hover:border-primary/40 text-foreground transition-all duration-500",
+        secondary: "bg-secondary/10 text-foreground hover:bg-secondary/20 border border-secondary/20 transition-all duration-500",
+        ghost: "hover:bg-muted hover:text-foreground transition-all duration-300",
+        link: "text-primary underline-offset-4 hover:underline hover:text-primary-light transition-colors duration-300",
+        luxury: "bg-gradient-luxury text-primary-foreground hover:opacity-95 shadow-luxury transition-all duration-500 hover:shadow-gold hover:scale-[1.02]",
+        gold: "bg-gradient-gold text-foreground shadow-gold hover:shadow-luxury transition-all duration-500 hover:scale-[1.02] font-semibold",
+        glass: "bg-white/80 backdrop-blur-glass border border-white/20 text-foreground hover:bg-white/90 shadow-card transition-all duration-500 hover:shadow-soft",
       },
       size: {
         default: "h-10 px-4 py-2",

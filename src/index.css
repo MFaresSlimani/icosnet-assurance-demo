@@ -8,43 +8,53 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 215 25% 15%;
+    --background: 210 30% 98%;
+    --foreground: 215 35% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
+    --card-foreground: 215 35% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 15%;
+    --popover-foreground: 215 35% 12%;
 
-    --primary: 210 85% 55%;
+    --primary: 215 70% 35%;
     --primary-foreground: 0 0% 100%;
-    --primary-variant: 210 85% 45%;
+    --primary-variant: 215 65% 30%;
+    --primary-light: 215 55% 55%;
 
-    --secondary: 195 75% 60%;
-    --secondary-foreground: 215 25% 15%;
+    --secondary: 200 25% 65%;
+    --secondary-foreground: 215 35% 12%;
 
-    --muted: 210 15% 90%;
-    --muted-foreground: 215 15% 45%;
+    --muted: 210 20% 94%;
+    --muted-foreground: 215 20% 50%;
 
-    --accent: 150 65% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 45 100% 65%;
+    --accent-foreground: 215 35% 12%;
+    --gold: 45 95% 60%;
+    --gold-light: 45 100% 75%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 88%;
-    --input: 210 20% 92%;
-    --ring: 210 85% 55%;
+    --border: 210 25% 90%;
+    --input: 210 20% 94%;
+    --ring: 215 70% 35%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
     
-    --gradient-hero: linear-gradient(135deg, hsl(210, 85%, 55%), hsl(195, 75%, 60%));
-    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%), hsl(210, 20%, 99%));
-    --shadow-soft: 0 4px 20px -4px hsl(210, 85%, 55%, 0.15);
-    --shadow-card: 0 2px 12px -2px hsl(210, 40%, 60%, 0.08);
+    --gradient-hero: linear-gradient(135deg, hsl(215, 70%, 35%) 0%, hsl(215, 65%, 45%) 50%, hsl(200, 70%, 55%) 100%);
+    --gradient-luxury: linear-gradient(165deg, hsl(215, 70%, 35%), hsl(215, 60%, 40%), hsl(45, 95%, 60%, 0.15));
+    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%), hsl(210, 30%, 99%));
+    --gradient-glass: linear-gradient(135deg, hsla(0, 0%, 100%, 0.9), hsla(210, 30%, 98%, 0.85));
+    --gradient-gold: linear-gradient(135deg, hsl(45, 95%, 60%), hsl(45, 100%, 70%));
     
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-luxury: 0 10px 40px -10px hsla(215, 70%, 35%, 0.2);
+    --shadow-soft: 0 4px 24px -4px hsla(215, 50%, 40%, 0.12);
+    --shadow-card: 0 2px 16px -2px hsla(210, 40%, 60%, 0.06);
+    --shadow-gold: 0 4px 20px -4px hsla(45, 95%, 60%, 0.3);
+    
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-elegant: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -57,34 +67,37 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 215 30% 8%;
-    --foreground: 210 20% 95%;
+    --background: 215 35% 8%;
+    --foreground: 210 25% 95%;
 
-    --card: 215 25% 12%;
-    --card-foreground: 210 20% 95%;
+    --card: 215 30% 10%;
+    --card-foreground: 210 25% 95%;
 
-    --popover: 215 25% 12%;
-    --popover-foreground: 210 20% 95%;
+    --popover: 215 30% 10%;
+    --popover-foreground: 210 25% 95%;
 
-    --primary: 210 85% 55%;
+    --primary: 215 65% 55%;
     --primary-foreground: 0 0% 100%;
-    --primary-variant: 210 85% 45%;
+    --primary-variant: 215 60% 50%;
+    --primary-light: 215 60% 65%;
 
-    --secondary: 195 75% 60%;
-    --secondary-foreground: 215 25% 15%;
+    --secondary: 200 30% 50%;
+    --secondary-foreground: 210 25% 95%;
 
-    --muted: 215 20% 20%;
-    --muted-foreground: 215 15% 60%;
+    --muted: 215 25% 18%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 150 65% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 45 100% 70%;
+    --accent-foreground: 215 35% 12%;
+    --gold: 45 95% 65%;
+    --gold-light: 45 100% 80%;
 
     --destructive: 0 62.8% 50.6%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 215 20% 20%;
-    --input: 215 20% 20%;
-    --ring: 210 85% 55%;
+    --border: 215 25% 18%;
+    --input: 215 25% 16%;
+    --ring: 215 65% 55%;
     
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -103,6 +116,10 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
   }
 }
